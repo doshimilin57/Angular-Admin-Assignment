@@ -8,7 +8,8 @@ Side bar with following items (Active Users, Active Devices)
     d. Make side pane as collapsible
     e. Use bootstrap for responsive Create appropriate footer
 
-Active Users: 
+Active Users:
+
     Displays the list of active users along with their information mentioned below Name, Email, Phone, Address, Data Of Joining
     The active users table/list should have the search capability Provide buttons to Add, Delete and Modify users
     Add, Modify should display appropriate forms Delete should re-assert the intention to delete
