@@ -21,7 +21,7 @@ Active Devices:
     Add, Modify should display appropriate forms Delete should re-assert the intention to delete
     
     
-    * Be creative and develop elegant UI
+* Be creative and develop elegant UI
  
 Notes 
 1. Use Bootstrap, Angular > 4, Angular CLI
