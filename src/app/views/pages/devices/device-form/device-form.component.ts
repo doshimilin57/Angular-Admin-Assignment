@@ -13,7 +13,7 @@ export class DeviceFormComponent implements OnInit, OnDestroy {
   querySub;
   deviceId = '';
   index;
-  constructor(public utility: UtitlityService) {}
+  constructor(public utility: UtitlityService) { }
 
   ngOnInit(): void {
     this.getQueryParam();
@@ -31,10 +31,6 @@ export class DeviceFormComponent implements OnInit, OnDestroy {
     } else {
       this.update(form);
     }
-    // this.users.push(form.value);
-    // let data = JSON.stringify(this.users);
-    // this.utility.saveUser(data);
-
     form.reset();
     this.utility.navigate('/devices');
   }

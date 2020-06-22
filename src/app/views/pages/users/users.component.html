@@ -3,22 +3,14 @@
     <div class="col-md-6 col-sm-12 col-xs-12">
       <div class="search-form">
         <div class="form-group">
-          <input
-            type="text"
-            class="form-control"
-            placeholder="Type to filter the name column..."
-            (keyup)="updateFilter($event)"
-          />
+          <input type="text" class="form-control" placeholder="Type to filter the name column..."
+            (keyup)="updateFilter($event)" />
         </div>
       </div>
     </div>
 
     <div class="col-md-6 col-sm-12 col-xs-12 text-right custom">
-      <button
-        type="button"
-        class="btn btn-primary btn-custom"
-        routerLink="/user-form"
-      >
+      <button type="button" class="btn btn-primary btn-custom" routerLink="/user-form">
         Add
       </button>
     </div>
@@ -27,50 +19,15 @@
     <div class="col-12">
       <div class="card">
         <div class="card-body">
-          <!-- <ngx-datatable
-              #myTable
-              [rows]="rows"
-              class="bootstrap table-bordered"
-              [columns]="columns"
-              [headerHeight]="50"
-              [columnMode]="'force'"
-              [rowHeight]="auto"
-              [scrollbarV]=""
-              footerHeight="50"
-              [limit]="8"
-              [sorts]=""
-            >
-            </ngx-datatable> -->
           <div class="table-responsive">
-            <ngx-datatable
-              #myTable
-              [rows]="rows"
-              class="bootstrap table-bordered hand"
-              [columns]="columns"
-              [headerHeight]="50"
-              [columnMode]="'force'"
-              [rowHeight]="50"
-              [scrollbarV]=""
-              [scrollbarH]="true"
-              footerHeight="50"
-              [limit]="8"
-              [sorts]=""
-              (activate)="onActivate($event)"
-            >
-              <ngx-datatable-column name="Name"> </ngx-datatable-column>
-              <ngx-datatable-column name="Email" [width]="250">
-              </ngx-datatable-column>
-              <ngx-datatable-column name="Phone"> </ngx-datatable-column>
-              <ngx-datatable-column name="Address"> </ngx-datatable-column>
-
-              <ngx-datatable-column
-                prop="date_of_joining"
-                name="Date of Joining"
-              >
-                <ng-template let-row="row" ngx-datatable-cell-template>
-                  {{ row.date_of_joining | date }}
-                </ng-template>
-              </ngx-datatable-column>
+            <ngx-datatable #myTable [rows]="rows" class="bootstrap table-bordered hand" [columns]="columns"
+              [headerHeight]="50" [columnMode]="'force'" [rowHeight]="50" [scrollbarV]="" [scrollbarH]="true"
+              footerHeight="50" [limit]="8" [sorts]="" (activate)="onActivate($event)">
+              <ngx-datatable-column prop="name" name="Name"> </ngx-datatable-column>
+              <ngx-datatable-column prop="person_contact" name="Person of contact"></ngx-datatable-column>
+              <ngx-datatable-column prop="phone" name="Telephone Number"> </ngx-datatable-column>
+              <ngx-datatable-column prop="address" name="Location"> </ngx-datatable-column>
+              <ngx-datatable-column prop="employees" name="Number of Employees"> </ngx-datatable-column>
             </ngx-datatable>
           </div>
         </div>
