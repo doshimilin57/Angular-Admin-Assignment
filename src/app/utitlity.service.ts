@@ -1,14 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-import { HttpClient } from '@angular/common/http';
-
 
 @Injectable({
   providedIn: 'root',
 })
-
 export class UtitlityService {
-  constructor(public router: Router, public activeRoute: ActivatedRoute, private http: HttpClient) { }
+  constructor(public router: Router, public activeRoute: ActivatedRoute) { }
 
   goBack() {
     window.history.back();
@@ -41,13 +38,4 @@ export class UtitlityService {
   getQueryParam() {
     return this.activeRoute.queryParams;
   }
-
-  setAuthenticatedStatus(value) {
-    localStorage.setItem('isAuthenticated', value);
-  }
-
-  getAuthenticatedStatus() {
-    return localStorage.getItem('isAuthenticated');
-  }
-
 }

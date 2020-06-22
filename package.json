@@ -1,13 +1,13 @@
 {
-  "name": "fake-umbrella-angular-app",
+  "name": "admin-panel-assignment",
   "version": "1.0.0",
-  "description": "Fake Umbrella Template",
+  "description": "Angular Admin Template",
   "author": {
     "name": "Milin Doshi"
   },
   "contributors": [
     {
-      "name": "Milin Doshi"
+      "name": "Milin"
     }
   ],
   "copyright": "Copyright 2020 MYD",

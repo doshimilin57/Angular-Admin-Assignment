@@ -9,10 +9,23 @@
           <div class="row">
             <div class="form-group col-sm-6">
               <label for="name">Name</label>
-              <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name"
-                [(ngModel)]="model.name" #name="ngModel" pattern="[a-zA-Z][a-zA-Z ]+" maxlength="30" required />
+              <input
+                type="text"
+                class="form-control"
+                id="name"
+                name="name"
+                placeholder="Enter your name"
+                [(ngModel)]="model.name"
+                #name="ngModel"
+                pattern="[a-zA-Z][a-zA-Z ]+"
+                maxlength="30"
+                required
+              />
 
-              <div class="form-error-messages" *ngIf="name.errors && (name.dirty || name.touched)">
+              <div
+                class="form-error-messages"
+                *ngIf="name.errors && (name.dirty || name.touched)"
+              >
                 <p *ngIf="name.errors.required">
                   Name is required
                 </p>
@@ -25,21 +38,26 @@
               </div>
             </div>
             <div class="form-group col-sm-6">
-              <label for="name">Person of contact</label>
-              <input type="text" class="form-control" id="person_contact" name="person_contact"
-                placeholder="Enter person of contact" [(ngModel)]="model.person_contact" #person_contact="ngModel"
-                pattern="[a-zA-Z][a-zA-Z ]+" maxlength="30" required />
+              <label for="email">Email</label>
+              <input
+                type="text"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                [(ngModel)]="model.email"
+                required
+                #email="ngModel"
+                pattern="[A-za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              />
 
-              <div class="form-error-messages"
-                *ngIf="person_contact.errors && (person_contact.dirty || person_contact.touched)">
-                <p *ngIf="person_contact.errors.required">
-                  Person of contact is required
-                </p>
-                <p *ngIf="person_contact.errors.maxlength">
-                  Max length exceeded.
-                </p>
-                <p *ngIf="person_contact.errors.pattern">
-                  Name can't contains numbers and special characters.
+              <div
+                class="form-error-messages"
+                *ngIf="email.errors && (email.dirty || email.touched)"
+              >
+                <p *ngIf="email.errors.required">Email is required</p>
+                <p *ngIf="email.errors.pattern">
+                  Email is invalid
                 </p>
               </div>
             </div>
@@ -48,29 +66,54 @@
           <!--/.row-->
           <div class="row">
             <div class="form-group col-sm-6">
-              <label for="phone">Telephone Number</label>
-              <input type="text" class="form-control" id="phone" placeholder="Enter telephone number" name="phone"
-                [(ngModel)]="model.phone" #phone="ngModel" pattern="\d*" maxlength="10" minlength="10" required />
-              <div class="form-error-messages" *ngIf="phone.errors && (phone.dirty || phone.touched)">
+              <label for="phone">Phone</label>
+              <input
+                type="text"
+                class="form-control"
+                id="phone"
+                placeholder="Enter phone number"
+                name="phone"
+                [(ngModel)]="model.phone"
+                #phone="ngModel"
+                pattern="\d*"
+                maxlength="10"
+                minlength="10"
+                required
+              />
+              <div
+                class="form-error-messages"
+                *ngIf="phone.errors && (phone.dirty || phone.touched)"
+              >
                 <p *ngIf="phone.errors.required">
-                  Telephone number is required
+                  Phone Number is required
                 </p>
                 <p *ngIf="phone.errors.pattern">
-                  Telephone Number is invalid
+                  Phone Number is invalid
                 </p>
                 <p *ngIf="phone.errors.minlength">
-                  Telephone Number should contains 10 digit
+                  Phone Number should contains 10 digit
                 </p>
               </div>
             </div>
             <div class="form-group col-sm-6">
-              <label for="address">Location (City)</label>
-              <input type="text" class="form-control" id="address" name="address" placeholder="Enter Location"
-                [(ngModel)]="model.address" #address="ngModel" required />
+              <label for="address">Address</label>
+              <input
+                type="text"
+                class="form-control"
+                id="address"
+                name="address"
+                placeholder="Enter address"
+                [(ngModel)]="model.address"
+                #address="ngModel"
+                required
+              />
 
-              <div class="form-error-messages" *ngIf="address.errors && (address.dirty || address.touched)">
+              <div
+                class="form-error-messages"
+                *ngIf="address.errors && (address.dirty || address.touched)"
+              >
                 <p *ngIf="address.errors.required">
-                  Location is required
+                  Address is required
                 </p>
               </div>
             </div>
@@ -78,30 +121,115 @@
 
           <div class="row">
             <div class="form-group col-sm-6">
-              <label for="employees">Number of Employees</label>
-              <input type="number" class="form-control" id="employees" placeholder="Enter number of employees"
-                name="employees" [(ngModel)]="model.employees" #employees="ngModel" required />
-              <div class="form-error-messages" *ngIf="employees.errors && (employees.dirty || employees.touched)">
-                <p *ngIf="employees.errors.required">
-                  Number of Employees is required
-                </p>
+              <label for="state">State</label>
+              <!-- <select
+                name="business_state"
+                placeholder="states"
+                required="required"
+                class="form-control rounded-0 custom-input"
+                [(ngModel)]="model.state"
+                #state="ngModel"
+              >
+                <option value="" selected hidden disabled>Select</option>
+                <option *ngFor="let s of states" [value]="s.name">{{
+                  s.name
+                }}</option>
+              </select> -->
+              <input
+                type="text"
+                class="form-control"
+                id="state"
+                name="state"
+                placeholder="Enter state"
+                [(ngModel)]="model.state"
+                #state="ngModel"
+                required
+              />
 
+              <div
+                class="form-error-messages"
+                *ngIf="state.errors && (state.dirty || state.touched)"
+              >
+                <p *ngIf="state.errors.required">
+                  State is required
+                </p>
+              </div>
+            </div>
+            <div class="form-group col-sm-6">
+              <label for="city">City</label>
+              <input
+                type="text"
+                class="form-control"
+                id="city"
+                name="city"
+                placeholder="Enter city"
+                [(ngModel)]="model.city"
+                #city="ngModel"
+                required
+              />
+
+              <div
+                class="form-error-messages"
+                *ngIf="city.errors && (city.dirty || city.touched)"
+              >
+                <p *ngIf="city.errors.required">
+                  City is required
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="form-group col-sm-6">
+              <label for="date_of_joining">Date of Joining</label>
+              <input
+                type="date"
+                class="form-control"
+                id="date_of_joining"
+                placeholder="Date of joining"
+                [(ngModel)]="model.date_of_joining"
+                required
+                name="date_of_joining"
+                #date_of_joining="ngModel"
+              />
+              <div
+                class="form-error-messages"
+                *ngIf="
+                  date_of_joining.errors &&
+                  (date_of_joining.dirty || date_of_joining.touched)
+                "
+              >
+                <p *ngIf="date_of_joining.errors.required">
+                  Date of joining is required
+                </p>
               </div>
             </div>
           </div>
 
           <div class="row">
             <div class="col width-80">
-              <button type="submit" class="btn btn-primary custom-btn" [disabled]="f.invalid">
+              <button
+                type="submit"
+                class="btn btn-primary custom-btn"
+                [disabled]="f.invalid"
+              >
                 {{ userId === '' ? 'Save' : 'Update' }}
               </button>
-              <button type="button" class="btn btn-secondary custom-btn" (click)="cancel()">
+              <button
+                type="button"
+                class="btn btn-secondary custom-btn"
+                (click)="cancel()"
+              >
                 Cancel
               </button>
             </div>
 
             <div class="col width-20 text-right" *ngIf="userId != ''">
-              <i class="fa fa-trash hand custom-icon" aria-hidden="true" (click)="myModal.show()"></i>
+              <i
+                class="fa fa-trash hand custom-icon"
+                aria-hidden="true"
+                (click)="myModal.show()"
+              ></i>
             </div>
           </div>
         </form>
@@ -110,13 +238,25 @@
   </div>
 </div>
 
-<div bsModal #myModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-  aria-hidden="true">
+<div
+  bsModal
+  #myModal="bs-modal"
+  class="modal fade"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="myModalLabel"
+  aria-hidden="true"
+>
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title">Delete</h4>
-        <button type="button" class="close" (click)="myModal.hide()" aria-label="Close">
+        <button
+          type="button"
+          class="close"
+          (click)="myModal.hide()"
+          aria-label="Close"
+        >
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
@@ -124,7 +264,11 @@
         <p>Are you sure ?</p>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" (click)="myModal.hide()">
+        <button
+          type="button"
+          class="btn btn-secondary"
+          (click)="myModal.hide()"
+        >
           Close
         </button>
         <button type="button" class="btn btn-primary" (click)="delete()">

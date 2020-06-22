@@ -2,12 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
 
 import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 import { PERFECT_SCROLLBAR_CONFIG } from 'ngx-perfect-scrollbar';
 import { PerfectScrollbarConfigInterface } from 'ngx-perfect-scrollbar';
-
 
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
   suppressScrollX: true,
@@ -42,7 +40,6 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
 import { UsersComponent } from './views/pages/users/users.component';
 import { DevicesComponent } from './views/pages/devices/devices.component';
-import { ReportsComponent } from './views/pages/reports/reports.component';
 import { NgxDatatableModule } from '@swimlane/ngx-datatable';
 import { UserFormComponent } from './views/pages/users/user-form/user-form.component';
 import { ModalModule } from 'ngx-bootstrap/modal';
@@ -66,7 +63,6 @@ import { DeviceFormComponent } from './views/pages/devices/device-form/device-fo
     ChartsModule,
     NgxDatatableModule,
     FormsModule,
-    HttpClientModule,
   ],
   declarations: [
     AppComponent,
@@ -77,7 +73,6 @@ import { DeviceFormComponent } from './views/pages/devices/device-form/device-fo
     RegisterComponent,
     UsersComponent,
     DevicesComponent,
-    ReportsComponent,
     UserFormComponent,
     DeviceFormComponent,
   ],
@@ -89,5 +84,4 @@ import { DeviceFormComponent } from './views/pages/devices/device-form/device-fo
   ],
   bootstrap: [AppComponent],
 })
-
-export class AppModule { }
+export class AppModule {}

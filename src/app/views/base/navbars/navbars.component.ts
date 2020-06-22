@@ -1,5 +1,5 @@
-import { AfterViewChecked, Component, ElementRef, OnInit, Renderer2, ViewChild } from '@angular/core';
-import { CollapseDirective } from 'ngx-bootstrap/collapse';
+import {AfterViewChecked, Component, ElementRef, OnInit, Renderer2, ViewChild} from '@angular/core';
+import {CollapseDirective} from 'ngx-bootstrap/collapse';
 
 @Component({
   selector: 'app-navbars',
@@ -16,7 +16,7 @@ export class NavbarsComponent implements OnInit, AfterViewChecked {
     if (this.collapseRef) {
       // temp fix for "overflow: hidden"
       if (getComputedStyle(this.collapseRef.nativeElement).getPropertyValue('display') === 'flex') {
-        this.renderer.removeStyle(this.collapseRef.nativeElement, 'overflow');
+       this.renderer.removeStyle(this.collapseRef.nativeElement, 'overflow');
       }
     }
     return this._isCollapsed;
@@ -30,9 +30,9 @@ export class NavbarsComponent implements OnInit, AfterViewChecked {
     private renderer: Renderer2,
   ) { }
 
-  ngOnInit() { }
+  ngOnInit() {}
 
-  ngAfterViewChecked(): void {
+  ngAfterViewChecked (): void {
     this.collapseRef = this.collapse;
   }
 }

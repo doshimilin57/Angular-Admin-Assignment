@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
-  selector: 'app-fake-umbrella',
+  // tslint:disable-next-line
+  selector: 'body',
   template: '<router-outlet></router-outlet>'
 })
-
 export class AppComponent implements OnInit {
   constructor(private router: Router) { }
 
