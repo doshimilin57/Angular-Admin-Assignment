@@ -24,7 +24,7 @@ export class UsersComponent implements OnInit {
     { name: 'date_of_joining', prop: 'date_of_joining' },
   ];
   temp = [];
-  constructor(private router: Router, public utility: UtitlityService) {}
+  constructor(private router: Router, public utility: UtitlityService) { }
 
   ngOnInit(): void {
     const users = this.utility.getUsers();

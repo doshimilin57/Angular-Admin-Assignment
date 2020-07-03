@@ -13,7 +13,7 @@ export class DeviceFormComponent implements OnInit, OnDestroy {
   querySub;
   deviceId = '';
   index;
-  constructor(public utility: UtitlityService) {}
+  constructor(public utility: UtitlityService) { }
 
   ngOnInit(): void {
     this.getQueryParam();
