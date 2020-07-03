@@ -25,23 +25,6 @@
               </div>
             </div>
             <div class="form-group col-sm-6">
-<<<<<<< HEAD
-              <label for="name">Person of contact</label>
-              <input type="text" class="form-control" id="person_contact" name="person_contact"
-                placeholder="Enter person of contact" [(ngModel)]="model.person_contact" #person_contact="ngModel"
-                pattern="[a-zA-Z][a-zA-Z ]+" maxlength="30" required />
-
-              <div class="form-error-messages"
-                *ngIf="person_contact.errors && (person_contact.dirty || person_contact.touched)">
-                <p *ngIf="person_contact.errors.required">
-                  Person of contact is required
-                </p>
-                <p *ngIf="person_contact.errors.maxlength">
-                  Max length exceeded.
-                </p>
-                <p *ngIf="person_contact.errors.pattern">
-                  Name can't contains numbers and special characters.
-=======
               <label for="email">Email</label>
               <input type="text" class="form-control" id="email" name="email" placeholder="Enter your email"
                 [(ngModel)]="model.email" required #email="ngModel"
@@ -51,7 +34,6 @@
                 <p *ngIf="email.errors.required">Email is required</p>
                 <p *ngIf="email.errors.pattern">
                   Email is invalid
->>>>>>> a3383a676a52733e58fc8d2e28b16217ab62bb85
                 </p>
               </div>
             </div>
@@ -60,39 +42,29 @@
           <!--/.row-->
           <div class="row">
             <div class="form-group col-sm-6">
-<<<<<<< HEAD
-              <label for="phone">Telephone Number</label>
-              <input type="text" class="form-control" id="phone" placeholder="Enter telephone number" name="phone"
-=======
               <label for="phone">Phone</label>
               <input type="text" class="form-control" id="phone" placeholder="Enter phone number" name="phone"
->>>>>>> a3383a676a52733e58fc8d2e28b16217ab62bb85
                 [(ngModel)]="model.phone" #phone="ngModel" pattern="\d*" maxlength="10" minlength="10" required />
               <div class="form-error-messages" *ngIf="phone.errors && (phone.dirty || phone.touched)">
                 <p *ngIf="phone.errors.required">
-                  Telephone number is required
+                  Phone Number is required
                 </p>
                 <p *ngIf="phone.errors.pattern">
-                  Telephone Number is invalid
+                  Phone Number is invalid
                 </p>
                 <p *ngIf="phone.errors.minlength">
-                  Telephone Number should contains 10 digit
+                  Phone Number should contains 10 digit
                 </p>
               </div>
             </div>
             <div class="form-group col-sm-6">
-<<<<<<< HEAD
-              <label for="address">Location (City)</label>
-              <input type="text" class="form-control" id="address" name="address" placeholder="Enter Location"
-=======
               <label for="address">Address</label>
               <input type="text" class="form-control" id="address" name="address" placeholder="Enter address"
->>>>>>> a3383a676a52733e58fc8d2e28b16217ab62bb85
                 [(ngModel)]="model.address" #address="ngModel" required />
 
               <div class="form-error-messages" *ngIf="address.errors && (address.dirty || address.touched)">
                 <p *ngIf="address.errors.required">
-                  Location is required
+                  Address is required
                 </p>
               </div>
             </div>
@@ -100,14 +72,6 @@
 
           <div class="row">
             <div class="form-group col-sm-6">
-<<<<<<< HEAD
-              <label for="employees">Number of Employees</label>
-              <input type="number" class="form-control" id="employees" placeholder="Enter number of employees"
-                name="employees" [(ngModel)]="model.employees" #employees="ngModel" required />
-              <div class="form-error-messages" *ngIf="employees.errors && (employees.dirty || employees.touched)">
-                <p *ngIf="employees.errors.required">
-                  Number of Employees is required
-=======
               <label for="state">State</label>
               <!-- <select
                 name="business_state"
@@ -139,11 +103,11 @@
               <div class="form-error-messages" *ngIf="city.errors && (city.dirty || city.touched)">
                 <p *ngIf="city.errors.required">
                   City is required
->>>>>>> a3383a676a52733e58fc8d2e28b16217ab62bb85
                 </p>
+              </div>
+            </div>
+          </div>
 
-<<<<<<< HEAD
-=======
           <div class="row">
             <div class="form-group col-sm-6">
               <label for="date_of_joining">Date of Joining</label>
@@ -156,7 +120,6 @@
                 <p *ngIf="date_of_joining.errors.required">
                   Date of joining is required
                 </p>
->>>>>>> a3383a676a52733e58fc8d2e28b16217ab62bb85
               </div>
             </div>
           </div>

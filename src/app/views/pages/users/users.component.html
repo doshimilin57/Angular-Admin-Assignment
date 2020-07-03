@@ -19,17 +19,24 @@
     <div class="col-12">
       <div class="card">
         <div class="card-body">
+          <!-- <ngx-datatable
+              #myTable
+              [rows]="rows"
+              class="bootstrap table-bordered"
+              [columns]="columns"
+              [headerHeight]="50"
+              [columnMode]="'force'"
+              [rowHeight]="auto"
+              [scrollbarV]=""
+              footerHeight="50"
+              [limit]="8"
+              [sorts]=""
+            >
+            </ngx-datatable> -->
           <div class="table-responsive">
             <ngx-datatable #myTable [rows]="rows" class="bootstrap table-bordered hand" [columns]="columns"
               [headerHeight]="50" [columnMode]="'force'" [rowHeight]="50" [scrollbarV]="" [scrollbarH]="true"
               footerHeight="50" [limit]="8" [sorts]="" (activate)="onActivate($event)">
-<<<<<<< HEAD
-              <ngx-datatable-column prop="name" name="Name"> </ngx-datatable-column>
-              <ngx-datatable-column prop="person_contact" name="Person of contact"></ngx-datatable-column>
-              <ngx-datatable-column prop="phone" name="Telephone Number"> </ngx-datatable-column>
-              <ngx-datatable-column prop="address" name="Location"> </ngx-datatable-column>
-              <ngx-datatable-column prop="employees" name="Number of Employees"> </ngx-datatable-column>
-=======
               <ngx-datatable-column name="Name"> </ngx-datatable-column>
               <ngx-datatable-column name="Email" [width]="250">
               </ngx-datatable-column>
@@ -41,7 +48,6 @@
                   {{ row.date_of_joining | date }}
                 </ng-template>
               </ngx-datatable-column>
->>>>>>> a3383a676a52733e58fc8d2e28b16217ab62bb85
             </ngx-datatable>
           </div>
         </div>

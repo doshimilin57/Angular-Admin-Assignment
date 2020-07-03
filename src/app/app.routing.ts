@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule, CanActivate } from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 
 // Import Containers
 import { DefaultLayoutComponent } from './containers';
@@ -10,10 +10,8 @@ import { LoginComponent } from './views/login/login.component';
 import { RegisterComponent } from './views/register/register.component';
 import { UsersComponent } from './views/pages/users/users.component';
 import { DevicesComponent } from './views/pages/devices/devices.component';
-import { ReportsComponent } from './views/pages/reports/reports.component';
 import { UserFormComponent } from './views/pages/users/user-form/user-form.component';
 import { DeviceFormComponent } from './views/pages/devices/device-form/device-form.component';
-import { AuthGuardService } from './auth.service';
 
 export const routes: Routes = [
   {
@@ -21,6 +19,7 @@ export const routes: Routes = [
     redirectTo: 'login',
     pathMatch: 'full',
   },
+
   {
     path: '404',
     component: P404Component,
@@ -45,7 +44,6 @@ export const routes: Routes = [
   {
     path: '',
     component: DefaultLayoutComponent,
-    canActivate: [AuthGuardService],
     data: {
       title: 'Home',
     },
@@ -55,13 +53,6 @@ export const routes: Routes = [
         component: DevicesComponent,
         data: {
           title: 'Devices',
-        },
-      },
-      {
-        path: 'reports',
-        component: ReportsComponent,
-        data: {
-          title: 'Reports',
         },
       },
       {
@@ -103,8 +94,4 @@ export const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
-<<<<<<< HEAD
-
-=======
->>>>>>> a3383a676a52733e58fc8d2e28b16217ab62bb85
 export class AppRoutingModule { }

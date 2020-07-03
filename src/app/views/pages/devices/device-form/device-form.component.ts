@@ -31,6 +31,10 @@ export class DeviceFormComponent implements OnInit, OnDestroy {
     } else {
       this.update(form);
     }
+    // this.users.push(form.value);
+    // let data = JSON.stringify(this.users);
+    // this.utility.saveUser(data);
+
     form.reset();
     this.utility.navigate('/devices');
   }

@@ -9,7 +9,6 @@ import { UtitlityService } from '../../../utitlity.service';
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.css'],
 })
-
 export class UsersComponent implements OnInit {
   @ViewChild(DatatableComponent, { static: false }) table: DatatableComponent;
   name = '';
@@ -17,10 +16,12 @@ export class UsersComponent implements OnInit {
   tableOffset = 0;
   columns = [
     { name: 'Name', prop: 'name' },
-    { name: 'Person of contact', prop: 'person_contact' },
-    { name: 'Telephone Phone', prop: 'phone' },
-    { name: 'Location', prop: 'address' },
-    { name: 'Number of Employees', prop: 'employees' },
+    { name: 'Email', prop: 'email' },
+    { name: 'Phone', prop: 'phone' },
+    { name: 'Address', prop: 'address' },
+    { name: 'City', prop: 'city' },
+    { name: 'State', prop: 'state' },
+    { name: 'date_of_joining', prop: 'date_of_joining' },
   ];
   temp = [];
   constructor(private router: Router, public utility: UtitlityService) { }
@@ -33,7 +34,6 @@ export class UsersComponent implements OnInit {
 
     this.rows = [...users];
     this.temp = [...this.rows];
-
   }
 
   updateFilter(event) {
