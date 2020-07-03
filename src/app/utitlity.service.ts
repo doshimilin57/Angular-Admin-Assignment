@@ -8,7 +8,11 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class UtitlityService {
+<<<<<<< HEAD
   constructor(public router: Router, public activeRoute: ActivatedRoute, private http: HttpClient) { }
+=======
+  constructor(public router: Router, public activeRoute: ActivatedRoute) { }
+>>>>>>> a3383a676a52733e58fc8d2e28b16217ab62bb85
 
   goBack() {
     window.history.back();

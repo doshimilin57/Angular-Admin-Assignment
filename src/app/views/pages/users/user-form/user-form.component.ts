@@ -14,7 +14,11 @@ export class UserFormComponent implements OnInit, OnDestroy {
   users = [];
   querySub: any;
   userId = '';
+<<<<<<< HEAD
   index: any;
+=======
+  index;
+>>>>>>> a3383a676a52733e58fc8d2e28b16217ab62bb85
   constructor(public utility: UtitlityService) { }
 
   ngOnInit(): void {

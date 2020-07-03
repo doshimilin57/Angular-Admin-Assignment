@@ -103,5 +103,8 @@ export const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
+<<<<<<< HEAD
 
+=======
+>>>>>>> a3383a676a52733e58fc8d2e28b16217ab62bb85
 export class AppRoutingModule { }
