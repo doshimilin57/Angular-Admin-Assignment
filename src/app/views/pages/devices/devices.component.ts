@@ -20,7 +20,7 @@ export class DevicesComponent implements OnInit {
     { name: 'Last LoggedIn Time', prop: 'lastLoggedinTime' },
   ];
   temp = [];
-  constructor(private router: Router, public utility: UtitlityService) {}
+  constructor(private router: Router, public utility: UtitlityService) { }
 
   ngOnInit(): void {
     const devices = this.utility.getDevices();

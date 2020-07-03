@@ -1,21 +1,16 @@
 {
-  "name": "@coreui/coreui-free-angular-admin-template",
-  "version": "2.9.2",
-  "description": "CoreUI Free Angular 2+ Admin Template",
+  "name": "fake-umbrella-angular-app",
+  "version": "1.0.0",
+  "description": "Fake Umbrella Template",
   "author": {
-    "name": "Łukasz Holeczek",
-    "url": "http://holeczek.pl",
-    "github": "https://github.com/mrholek",
-    "twitter": "https://twitter.com/lukaszholeczek"
+    "name": "Milin Doshi"
   },
   "contributors": [
     {
-      "name": "Andrzej Kopański",
-      "url": "https://github.com/xidedix"
+      "name": "Milin Doshi"
     }
   ],
-  "homepage": "https://coreui.io/angular",
-  "copyright": "Copyright 2020 creativeLabs Łukasz Holeczek",
+  "copyright": "Copyright 2020 MYD",
   "license": "MIT",
   "scripts": {
     "ng": "ng",

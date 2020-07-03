@@ -7,14 +7,15 @@ import { UtitlityService } from '../../../../utitlity.service';
   templateUrl: './user-form.component.html',
   styleUrls: ['./user-form.component.css'],
 })
+
 export class UserFormComponent implements OnInit, OnDestroy {
   @ViewChild('myModal') public myModal: ModalDirective;
   model: any = {};
   users = [];
-  querySub;
+  querySub: any;
   userId = '';
-  index;
-  constructor(public utility: UtitlityService) {}
+  index: any;
+  constructor(public utility: UtitlityService) { }
 
   ngOnInit(): void {
     this.getQueryParam();
@@ -32,10 +33,6 @@ export class UserFormComponent implements OnInit, OnDestroy {
     } else {
       this.update(form);
     }
-    // this.users.push(form.value);
-    // let data = JSON.stringify(this.users);
-    // this.utility.saveUser(data);
-
     form.reset();
     this.utility.navigate('/users');
   }
@@ -94,7 +91,6 @@ export class UserFormComponent implements OnInit, OnDestroy {
     const data = this.utility.getUsers();
     data.splice(this.index, 1);
     this.utility.saveUser(JSON.stringify(data));
-
     this.utility.navigate('/users');
   }
 }
